@@ -1,0 +1,19 @@
+#!/usr/bin/env zsh
+echo 'T I M E - B I N - O !' | sed  -e :a -e "s/^.\{1,$(tput cols)\}$/ & /;ta" | tr -d '\n' | head -c $(tput cols)
+echo 'Delete interval in seconds?'
+read time
+echo $time "sec" 
+ while true; do
+  bash -c 'rm -rv ~/.Trash/*'
+  echo "HEADSHOT @ $(date +%H:%M:%S)"
+  sleep $time
+  bash -c 'rm -rv ~/.Trash/*'
+  echo "ULTRAKILL @ $(date +%H:%M:%S)"
+  sleep $time
+  bash -c 'rm -rv ~/.Trash/*'
+  echo "MULTIKILL @ $(date +%H:%M:%S)"
+  sleep $time 
+  bash -c 'rm -rv ~/.Trash/*'
+  echo "RM'd @ $(date +%H:%M:%S)"
+  sleep $time 
+ done
