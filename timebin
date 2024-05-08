@@ -1,5 +1,5 @@
 #!/usr/bin/env zsh
 echo Enter delete interval in seconds
 read time
-watch -n$time rm -r ~/.Trash/*
+watch -n $time rm -r ~/.Trash/*
 
